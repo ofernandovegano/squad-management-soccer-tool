@@ -25,7 +25,7 @@
   font-size: 1.1rem;
   text-align: center;
   margin-top: 6vh;
-  margin-bottom: 5vh;
+  margin-bottom: 6vh;
   width: 100%;
 }
 .formation-header {
@@ -33,7 +33,12 @@
   font-weight: bold;
   margin-right: 40px;
 }
-.formationField {
+@media screen and(max-width: 992px) {
+  .formation-header {
+    margin-left: 30px;
+  }
+}
+.formation-field {
   width: 90%;
   height: 105vh;
   background: linear-gradient(to bottom, $venturus-md-pink-purple, $venturus-dark-purple 120%);
@@ -43,6 +48,11 @@
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+}
+@media screen and(max-width: 992px) {
+  .formation-field {
+    margin: 0 auto;
+  }
 }
 .positions {
   height: 20%;
@@ -118,12 +128,19 @@
   border-radius: 5px;
   color: $venturus-white;
   margin-top: 30px;
+  margin-bottom: 6vh;
   padding: 0.4rem 0;
   border: 1px solid $venturus-pink;
   &:hover {
     color: $venturus-green-approved;
     border: 2px solid $venturus-green-approved;
     ;
+  }
+}
+@media screen and(max-width: 992px) {
+  .saveButton {
+    width: 90%;
+    margin: 3vh auto 6vh auto;
   }
 }
 select {
@@ -136,6 +153,17 @@ select {
   color: black;
   font-weight: bold;
   margin-left: auto;
+}
+@media screen and(max-width: 992px) {
+  .search-players-header {
+    margin-top: 6vh;
+    margin-left: 10px;
+  }
+}
+@media screen and(max-width: 992px) {
+  .form-group {
+    margin: 0 auto;
+  }
 }
 
 
