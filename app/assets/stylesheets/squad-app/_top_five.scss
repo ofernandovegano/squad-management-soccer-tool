@@ -52,6 +52,21 @@
     border:2px solid $venturus-md-pink-purple;
   }
 }
+@media screen and(max-width: 1275px) {
+  .top {
+    font-size: 0.6rem;
+  }
+}
+@media screen and(max-width: 1100px) {
+  .top {
+    font-size: 0.5rem;
+  }
+}
+@media screen and(max-width: 992px) {
+  .top {
+    font-size: 1rem;
+  }
+}
 .container-top {
   // padding: 0 0.5vh;
   display: flex;
