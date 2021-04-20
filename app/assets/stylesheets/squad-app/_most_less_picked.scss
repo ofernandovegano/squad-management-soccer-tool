@@ -3,6 +3,11 @@
   height: 30vh;
   width: 95%;
 }
+@media screen and(max-width: 992px) {
+  .most-less-picked {
+    margin: 6vh auto 0 auto;
+  }
+}
 .container-most-less-picked {
   display: flex;
   justify-content: center;

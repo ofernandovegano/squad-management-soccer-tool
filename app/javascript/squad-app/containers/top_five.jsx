@@ -16,13 +16,13 @@ class TopFive extends Component {
         <h2>Top 5</h2>
       </div>
       <div className="row top-five-sub-headers">
-        <div className="highest avg-age col-6">
+        <div className="highest avg-age col-12 col-md-6">
           <h3>Highest avg Age</h3>
             <div className='avg-age-data'>
               <HighestTopFive />  
             </div>
         </div>
-        <div className="lowest avg-age col-6">
+        <div className="lowest avg-age col-12 col-md-6">
           <h3>Lowest avg Age</h3>
             <div className='avg-age-data'>
               <LowestTopFive />

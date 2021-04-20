@@ -22,7 +22,7 @@ class CreateTeamForm extends Component {
     <div key="add" className="form-container">
       <form>
         <div className="row">
-          <div className="col-6">
+          <div className="col-12 col-md-6">
             <div className="form-group">
               <label htmlFor="name">Team Name</label>
               <input name="name" type="text" placeholder="Juventus F. C."className="form-control" />
@@ -32,7 +32,7 @@ class CreateTeamForm extends Component {
               <textarea name="description" type="text" placeholder="Cristiano Ronaldo is better than Lionel Messi" rows='10' className="form-control form-description"></textarea>
             </div>     
           </div>
-          <div className="col-6">
+          <div className="col-12 col-md-6">
             
             <div className="form-group form-right form-check">
               <label htmlFor="website">Team website</label>
@@ -66,7 +66,7 @@ class CreateTeamForm extends Component {
         </div>
           <h3 className='sub-header-before-tatics'>CONFIGURE SQUAD</h3>
           <div className="row">
-            <div className="col-6">
+            <div className="col-12 col-md-6">
               {/* <span className='formation-header'>Formation</span> */}
               <label for="formation" className='formation-header'>Formation</label>
               <select id="formation" name="formation">
@@ -81,7 +81,7 @@ class CreateTeamForm extends Component {
                 <option value="4-5-1">4-5-1</option>
                 <option value="5-4-1">5-4-1</option>
               </select>
-              <div className='formationField'>
+              <div className='formation-field'>
                 <div className="positions">
 
                 <div className="after-positions">
@@ -184,7 +184,7 @@ class CreateTeamForm extends Component {
 
               
             </div>
-            <div className="col-6 search-players">
+            <div className="col-12 col-md-6 search-players">
 
               <SearchPlayers />
               
