@@ -1,0 +1,51 @@
+.top-five {
+  // height: 50vh;
+  background-color: $venturus-white;
+  margin-top: 6vh;
+  margin-bottom: 2.5%;
+  width: 95%;
+}
+.avg-age {
+  h3 {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
+.top-five-sub-headers h3 {
+  padding: 3vh;
+  padding-bottom: 0;
+  margin-top: 1vh;
+}
+.avg-age-data {
+  background-color: $venturus-light-purple;
+  height: 27vh;
+  margin: 3vh;
+  margin-top: 2vh;border-radius: 10px;
+}
+.highest>.avg-age-data {
+  margin-right: 0;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5vh;
+  background-color: $venturus-white;
+  border-radius: 4px;
+  flex-grow: 100;
+  padding: 0.25vh 2vh;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border:2px solid $venturus-white;
+  &:hover{
+    border:2px solid $venturus-md-pink-purple;
+  }
+}
+.container-top {
+  // padding: 0 0.5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  padding: 0.25vh;
+}

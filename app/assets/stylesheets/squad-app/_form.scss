@@ -1,0 +1,142 @@
+.form-container {
+  width: 80%;
+  margin: 0 auto;
+}
+.form-tags {
+  height: 22.5vh;
+}
+.form-group {
+  width: 90%;
+  padding: 0;
+}
+.form-right {
+  margin-left: auto;
+}
+.radio-check {
+  display: flex;
+  .form-check{
+
+    margin-right: 50px;
+  }
+}
+.sub-header-before-tatics {
+  color: rgb(179, 176, 176);
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 6vh;
+  margin-bottom: 5vh;
+  width: 100%;
+}
+.formation-header {
+  color: black;
+  font-weight: bold;
+  margin-right: 40px;
+}
+.formationField {
+  width: 90%;
+  height: 105vh;
+  background: linear-gradient(to bottom, $venturus-md-pink-purple, $venturus-dark-purple 120%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.positions {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content:space-around;
+}
+.after-positions {
+  display: flex;
+  align-items: center;
+}
+.player-border {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px dashed $venturus-white;
+  opacity: 0.6;
+  display: flex;
+  z-index: 2;
+  &:hover {
+    border: 2px solid $venturus-white;
+  }
+  &:active {
+    position:relative;
+    bottom:1px;
+  }
+}
+
+.plus-player {
+  font-size: 2rem;
+  color:$venturus-white;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  z-index: 2;
+  display: flex;
+  .plus {
+    margin: auto;
+  }
+}
+.player {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: $venturus-white;
+  opacity: 0.6;
+  margin: 3px;
+  color: $venturus-white;
+  margin: auto;
+  display: flex;
+}
+.circle-form {
+  border: 1px solid rgba(255, 255, 255, .2);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+}
+.middle-camp-line {
+  width: 100%;
+  height: 50%;
+  z-index: 1;
+  position: absolute;
+  div {
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    height: 50%;
+  }
+}
+.saveButton {
+  width: 45%;
+  background: linear-gradient(to bottom, $venturus-md-pink-purple, $venturus-dark-purple 120%);
+  border-radius: 5px;
+  color: $venturus-white;
+  margin-top: 30px;
+  padding: 0.4rem 0;
+  border: 1px solid $venturus-pink;
+  &:hover {
+    color: $venturus-green-approved;
+    border: 2px solid $venturus-green-approved;
+    ;
+  }
+}
+select {
+  padding: 3px 30px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+}
+.search-players-header {
+  color: black;
+  font-weight: bold;
+  margin-left: auto;
+}
+
+
+

@@ -1,0 +1,31 @@
+
+.col-6 {
+  padding: 0;
+}
+
+.first-column {
+}
+.second-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 95%;
+}
+.rounded-corners {
+  border-radius: 10px;
+}
+.rounded-corners-up {
+  border-radius: 10px 10px 0 0;
+}
+.rounded-corners-up-change {
+  border-radius: 10px 10px 0 0;
+}
+@media screen and (max-width: 1000px) {
+  .rounded-corners-up-change {
+    border-radius: 10px;
+  }
+}
+
+
+

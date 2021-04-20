@@ -1,0 +1,53 @@
+.nav-container {
+  color: white;
+  background: linear-gradient(to right, $venturus-pink, $venturus-purple 50%);
+  height: 6vh;
+  display: flex;
+}
+.navbar-venturus {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: $venturus-white;
+  p {
+    font-size: 1.1rem;
+    margin: 0;
+    padding: 0 20px;
+    opacity: 0.9;
+    font-weight: bold;
+  }
+}
+.logo-link {
+  &:hover {
+    text-decoration: none;
+  }
+}
+.logo img{
+  height: 5.5vh;
+  margin: auto;
+  opacity: 0.8;
+}
+.avatar {
+  border-radius: 50%;
+  width: 30px;
+  img {
+    height: 4vh;
+  }
+}
+.logged-in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    font-size: 0.8rem;
+    margin: 0 10px;
+    opacity: 0.9;
+    font-weight: bold;
+  }
+}

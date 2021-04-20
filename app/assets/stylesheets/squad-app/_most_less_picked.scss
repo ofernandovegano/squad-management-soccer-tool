@@ -1,0 +1,77 @@
+.most-less-picked {
+  background: linear-gradient(to bottom, $venturus-md-pink-purple, $venturus-dark-purple 80%);
+  height: 30vh;
+  width: 95%;
+}
+.container-most-less-picked {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  img {
+  width: 130px;
+  }
+}
+.most-less-picked h2 {
+  color: $venturus-white;
+  margin-top: 2vh;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  text-align: center;
+  wrap: nowrap;
+}
+
+@media screen and (max-width: 1200px) {
+  .most-less-picked h2 {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .most-less-picked h2 {
+    font-size: 0.9rem;
+  }
+}
+
+#h2-less{
+  color: $venturus-light-gray;
+}
+.most-less-percent {
+  width: 15%;
+  border-bottom: 1px solid $venturus-white;
+  height: 3vh;
+  align-self: flex-start;
+  color: $venturus-white;
+}
+.most {
+  border-right: 1px solid rgba(255, 255, 255, .2);
+  img {
+    padding: 5px;
+    margin: 10px;
+    border-radius: 50%;
+    border: 3px dashed $venturus-purple-light-border;
+    box-shadow: 0 0 20px $venturus-dark-purple;
+  }
+}
+.img-percent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.less img {
+  margin: 15px;
+  border-radius: 50%;
+  border: 3px solid $venturus-pink;
+}
+.circle {
+  border: 1px solid rgba(255, 255, 255, .2);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+}
+.most, .less {
+  width: 45vh;
+}
+.most-less-picked-row {
+  height: 100%;
+}
