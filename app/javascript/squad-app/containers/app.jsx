@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-// import { } from '../actions';
+import { fetchApi } from '../actions';
 
 import Navbar from '../components/navbar.jsx';
 import Footer from '../components/footer';
@@ -13,6 +13,7 @@ import MostLessPicked from './most_less_picked.jsx'
 
 class App extends Component {
   componentWillMount() {
+    this.props.fetchApi()
   }
 
   render() {
@@ -42,12 +43,12 @@ class App extends Component {
 
 function mapStateToProps(state) {
   return {
-
+    apiResults: state.api
   };
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ }, dispatch);
+  return bindActionCreators({ fetchApi }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
