@@ -14,6 +14,7 @@ import App from './containers/app';
 import CreateYourTeam from './containers/create_your_team';
 
 import teamReducer from './reducers/team_reducer.js';
+import apiReducer from './reducers/api_reducer.js';
 
 const initialState = {
   myTeams: [[['Barcelona', 'Barcelona Squad'],
@@ -35,8 +36,8 @@ const initialState = {
 };
 
 const reducers = combineReducers({
-  myTeams: teamReducer
-  // key: reducer
+  myTeams: teamReducer,
+  api: apiReducer
 });
 
 const middlewares = applyMiddleware(reduxPromise, logger);
