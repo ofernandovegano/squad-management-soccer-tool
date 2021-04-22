@@ -5,7 +5,8 @@ require'json'
 
 class PagesController < ApplicationController
   def home
-    
+    save_to_DB
+    @teams = Team.all
   end
 
   def football_api   
@@ -17,15 +18,16 @@ class PagesController < ApplicationController
     
     request = Net::HTTP::Get.new(url)
     request["x-rapidapi-host"] = 'v3.football.api-sports.io'
-    request["x-rapidapi-key"] = "#{ENV["REACT_APP_FOOTBALL_KEY"]}"
+    request["x-rapidapi-key"] = ENV["REACT_APP_FOOTBALL_KEY"]
     
     response = http.request(request)
     JSON.parse response.read_body 
   end
 
   def save_to_DB
-    @teams = football_api.response.each do |team|
-      Team.create(name: team["name"], team_id: team["id"])
+    teams = football_api["response"]
+    teams.each do |team|
+      Team.create(name: team["team"]["name"], team_id: team["team"]["id"])
     end
   end
 end
