@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   
   get '/', to: 'pages#home'
   get '/new', to: 'pages#home'
+  get '/reload_teams', to: 'pages#reload_teams'
+  get '/reload_avg_age_players', to: 'pages#reload_avg_age_players'
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
