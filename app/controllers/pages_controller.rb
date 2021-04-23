@@ -5,9 +5,15 @@ require'json'
 
 class PagesController < ApplicationController
   def home
-    save_to_DB
-    avg_age_players
     @teams = Team.all
+  end
+  
+  def reload_teams
+    save_to_DB
+  end
+
+  def reload_avg_age_players
+    avg_age_players
   end
 
   def football_api   
