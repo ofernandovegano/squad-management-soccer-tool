@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 
 class LowestTopFive extends Component {
 
@@ -14,6 +13,7 @@ class LowestTopFive extends Component {
             <div className='top' key={top[0]}>
               <div>{top[0]}</div>
               <div>{top[1]}</div>
+              <p>AAAAAAAAAAAAAAAA</p>
             </div>
           )
         }
@@ -25,7 +25,7 @@ class LowestTopFive extends Component {
 
 function mapStateToProps(state) {
   return {
-    topFive: state.myTeams[0].sort((a, b) => a[1] - b[1]).slice(0, 5)
+    topFive: state.myTeams[1].sort((a, b) => a[1] - b[1]).slice(0, 5)
   };
 }
 
