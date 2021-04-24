@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import { addTeam } from '../actions';
 
 import SearchPlayers from './search_players';
-import FormationPlayersForm from '../components/formation_players_form';
+import FormationPlayersForm from './formation_players_form';
 
 
 

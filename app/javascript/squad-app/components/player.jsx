@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Players = () => {
+const Player = () => {
   
     return (
     <div className="after-positions">
@@ -12,4 +12,4 @@ const Players = () => {
     );
   };
 
-export default Players;
+export default Player;
