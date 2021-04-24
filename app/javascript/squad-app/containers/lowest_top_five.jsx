@@ -13,7 +13,6 @@ class LowestTopFive extends Component {
             <div className='top' key={top[0]}>
               <div>{top[0]}</div>
               <div>{top[1]}</div>
-              <p>AAAAAAAAAAAAAAAA</p>
             </div>
           )
         }
