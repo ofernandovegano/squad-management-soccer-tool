@@ -10,10 +10,22 @@ class PagesController < ApplicationController
   
   def reload_teams
     save_to_DB
+    redirect_to root_path
   end
 
-  def reload_avg_age_players
-    avg_age_players
+  def reload_avg_age_players_part_one
+    avg_age_players(0, 8)
+    redirect_to root_path
+  end
+
+  def reload_avg_age_players_part_two
+    avg_age_players(8, 15)
+    redirect_to root_path
+  end
+
+  def reload_avg_age_players_part_three
+    avg_age_players(15, 20)
+    redirect_to root_path
   end
 
   def football_api   
@@ -53,9 +65,9 @@ class PagesController < ApplicationController
     JSON.parse response.read_body 
   end
 
-  def avg_age_players
+  def avg_age_players(initial, final)
     teams = Team.all
-    teams.each do |team|
+    teams.sort.slice(initial, final).each do |team|
       players = players_age_api(team)['response']
       ages = []
       players.each do |player|
@@ -64,7 +76,7 @@ class PagesController < ApplicationController
       ages.reject! {|n| n == nil}
       avg_age = ages.sum.to_f / ages.size
       update_team = Team.find(team['id'])
-      update_team.update(avg_age_players: avg_age)
+      update_team.update(avg_age_players: avg_age.round(1))
     end
   end
 end
