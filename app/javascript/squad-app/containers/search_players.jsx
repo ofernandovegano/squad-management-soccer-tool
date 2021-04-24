@@ -10,6 +10,7 @@ class SearchPlayers extends Component {
 
   render() {
     return (
+    <div className="col-12 col-md-6 search-players">
       <div className="form-group form-right">
         <p className='search-players-header'>Search Players</p>
         <input type="text" placeholder='Ronaldo' className="form-control input-search-player"/>
@@ -38,7 +39,7 @@ class SearchPlayers extends Component {
         </div>
 
       </div>
-
+    </div>
     );
   };
 };
