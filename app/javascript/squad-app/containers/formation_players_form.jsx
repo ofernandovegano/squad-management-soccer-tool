@@ -46,18 +46,18 @@ class FormationPlayersForm extends Component {
           <option value="3-2-2-3">3-2-2-3</option>
           <option value="3-2-2-1">3-2-2-1</option>
           <option value="4-3-1-1">4-3-2-1</option>
-          {/* <option value="3-4-3">3-4-3</option> */}
-          {/* <option value="3-5-2">3-5-2</option> */}
-          {/* <option value="4-3-2">4-3-2</option> */}
-          {/* <option value="4-4-2">4-4-2</option> */}
-          {/* <option value="4-5-1">4-5-1</option> */}
-          {/* <option value="5-4-1">5-4-1</option> */}
+          <option value="3-4-3">3-4-3</option>
+          <option value="3-5-2">3-5-2</option>
+          <option value="4-3-2">4-3-2</option>
+          <option value="4-4-2">4-4-2</option>
+          <option value="4-5-1">4-5-1</option>
+          <option value="5-4-1">5-4-1</option>
         </select>
         <div className='formation-field'>
           {/* { console.log(parseInt(this.state.selectValue.slice(-1))) } */}
           {/* { console.log(this.player(parseInt(this.state.selectValue.slice(-1)))) } */}
           <div className="positions">{ this.player(parseInt(this.state.selectValue.slice(-1))).map(play => <Player key={play} />) }</div>
-          <div className="positions">{ this.player(this.state.selectValue.length === 5 ? 0 : parseInt(this.state.selectValue.slice(4, 5))).map(play => <Player key={play} />) }</div>
+          <div className="positions">{ this.state.selectValue.length === 5 ? '' : this.player(parseInt(this.state.selectValue.slice(4, 5))).map(play => <Player key={play} />)}</div>
           <div className="positions">{ this.player(parseInt(this.state.selectValue.slice(2, 3))).map(play => <Player key={play} />) }</div>
           <div className="positions">{ this.player(parseInt(this.state.selectValue.slice(0, 1))).map(play => <Player key={play} />) }</div>
 
