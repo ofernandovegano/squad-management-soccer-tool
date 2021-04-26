@@ -54,16 +54,14 @@ class FormationPlayersForm extends Component {
           <option value="5-4-1">5-4-1</option>
         </select>
         <div className='formation-field'>
-          {/* { console.log(parseInt(this.state.selectValue.slice(-1))) } */}
-          {/* { console.log(this.player(parseInt(this.state.selectValue.slice(-1)))) } */}
+
           <div className="positions">{ this.player(parseInt(this.state.selectValue.slice(-1))).map(play => <Player key={play} />) }</div>
-          <div className="positions">{ this.state.selectValue.length === 5 ? '' : this.player(parseInt(this.state.selectValue.slice(4, 5))).map(play => <Player key={play} />)}</div>
+          <div className="positions">{ this.state.selectValue.length === 5 ? '' : this.player(parseInt(this.state.selectValue.slice(4, 5))).map(play => <Player key={play} />)} </div>
           <div className="positions">{ this.player(parseInt(this.state.selectValue.slice(2, 3))).map(play => <Player key={play} />) }</div>
           <div className="positions">{ this.player(parseInt(this.state.selectValue.slice(0, 1))).map(play => <Player key={play} />) }</div>
-
           {/* Goal keeper below */}
           <div className="positions"><Player /></div>
-
+          {/* Camp lines below */}
           <div className='middle-camp-line'><div></div></div>
           <div className="circle-form"></div>
         </div>
