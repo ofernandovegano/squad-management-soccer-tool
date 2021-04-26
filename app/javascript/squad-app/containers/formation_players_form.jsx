@@ -25,8 +25,8 @@ class FormationPlayersForm extends Component {
       return [1, 2, 3];
     } else if (numberPlayers === 4) {
       return [1, 2, 3, 4];
-    } else {
-      []
+    } else if (numberPlayers === 5) {
+      return [1, 2, 3, 4, 5];
     }
   }
 
@@ -45,7 +45,7 @@ class FormationPlayersForm extends Component {
           <option value="4-2-3-1">4-2-3-1</option>
           <option value="3-2-2-3">3-2-2-3</option>
           <option value="3-2-2-1">3-2-2-1</option>
-          <option value="4-3-1-1">4-3-2-1</option>
+          <option value="4-3-2-1">4-3-2-1</option>
           <option value="3-4-3">3-4-3</option>
           <option value="3-5-2">3-5-2</option>
           <option value="4-3-2">4-3-2</option>
