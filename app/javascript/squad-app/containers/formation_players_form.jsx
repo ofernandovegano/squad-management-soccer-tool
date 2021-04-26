@@ -13,27 +13,30 @@ class FormationPlayersForm extends Component {
     this.state = {
       selectValue: '4-2-3-1'
     };
+    this.handleChange = this.handleChange.bind(this)
   }
 
-  Player(numberPlayers) {
-    for (let i = 0; i < numberPlayers; i++) {
-      return <Player />
+  player(numberPlayers) {
+    if (numberPlayers === 1) {
+      return [1];
+    } else if (numberPlayers === 2) {
+      return [1, 2];
+    } else if (numberPlayers === 3) {
+      return [1, 2, 3];
+    } else if (numberPlayers === 4) {
+      return [1, 2, 3, 4];
+    } else {
+      []
     }
   }
 
   handleChange(e){
     const formation = e.target.value;
-    // this.setState({ attack: parseInt(formation.slice(-1)) });
-    // if (formation.length === 5) {
-    //   this.setState({ middleAttack: 0 })
-    // } else{
-    //   this.setState({ middleAttack: parseInt(formation.slice(4, 5)) });
-    // }
-    // this.setState({ middle: parseInt(formation.slice(2, 3)) });
-    // this.setState({ defense: parseInt(formation.slice(0, 1)) });
-    console.log(formation)
+    // console.log(e.target.value)
+    this.setState({ selectValue: e.target.value});
+    // console.log(this.state.selectValue)
   }
-
+  
   render() {
     return (
       <div className="col-12 col-md-6">
@@ -51,11 +54,12 @@ class FormationPlayersForm extends Component {
           {/* <option value="5-4-1">5-4-1</option> */}
         </select>
         <div className='formation-field'>
-
-          <div className="positions"><Player /><Player /></div>
-          <div className="positions"><Player /></div>
-          <div className="positions"><Player /><Player /><Player /></div>
-          <div className="positions"><Player /><Player /><Player /><Player /></div>
+          {/* { console.log(parseInt(this.state.selectValue.slice(-1))) } */}
+          {/* { console.log(this.player(parseInt(this.state.selectValue.slice(-1)))) } */}
+          <div className="positions">{ this.player(parseInt(this.state.selectValue.slice(-1))).map(play => <Player key={play} />) }</div>
+          <div className="positions">{ this.player(this.state.selectValue.length === 5 ? 0 : parseInt(this.state.selectValue.slice(4, 5))).map(play => <Player key={play} />) }</div>
+          <div className="positions">{ this.player(parseInt(this.state.selectValue.slice(2, 3))).map(play => <Player key={play} />) }</div>
+          <div className="positions">{ this.player(parseInt(this.state.selectValue.slice(0, 1))).map(play => <Player key={play} />) }</div>
 
           {/* Goal keeper below */}
           <div className="positions"><Player /></div>
