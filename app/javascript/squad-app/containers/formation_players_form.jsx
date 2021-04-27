@@ -39,7 +39,7 @@ class FormationPlayersForm extends Component {
   
   render() {
     return (
-      <div className="col-12 col-md-6">
+      <div>
         <label for="formation" className='formation-header'>Formation</label>
         <select id="formation" name="formation" onChange={this.handleChange} defaultValue={this.state.selectValue}>
           <option value="4-2-3-1">4-2-3-1</option>

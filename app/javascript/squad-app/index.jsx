@@ -15,10 +15,12 @@ import CreateYourTeam from './containers/create_your_team';
 
 import teamReducer from './reducers/team_reducer.js';
 import apiReducer from './reducers/api_reducer.js';
+import playersReducer from './reducers/players_reducer.js';
 
 const reducers = combineReducers({
   myTeams: teamReducer,
-  api: apiReducer
+  api: apiReducer,
+  players: playersReducer
 });
 
 const middlewares = applyMiddleware(reduxPromise, logger);
@@ -42,7 +44,8 @@ const initialState = {
               ['Ajax Amsterdam', 22],
               ['FC Nantes', 22.1],
               ['CSKA Moscow', 22.5]]],
-  teams: JSON.parse(root.dataset.teams)
+  teams: JSON.parse(root.dataset.teams),
+  players: [{ player: { name: 'Cristiano Ronaldo', age: '32' }, statistics: { 0: { team: {name: 'Juventus'}}}}]
 };
 
 // render an instance of the component in the DOM

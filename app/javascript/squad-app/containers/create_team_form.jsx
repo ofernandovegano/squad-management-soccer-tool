@@ -13,17 +13,18 @@ import FormationPlayersForm from './formation_players_form';
 
 
 class CreateTeamForm extends Component {
-  // handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   this.props.addTeam(this.props.teams, values, () => {
-  //     this.props.history.push('/');
-  //   });
-  // }
 
+  handleSubmit = (event) => {
+    event.preventDefault();
+    // this.props.addTeam(this.props.teams, values, () => {
+    //   this.props.history.push('/');
+    // });
+  }
+  
   render() {
     return (
     <div key="add" className="form-container">
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <div className="row">
           <div className="col-12 col-md-6">
             <div className="form-group">
@@ -67,15 +68,14 @@ class CreateTeamForm extends Component {
             </div>
           </div>
         </div>
-          <h3 className='sub-header-before-tatics'>CONFIGURE SQUAD</h3>
-          <div className="row">
-          <FormationPlayersForm /> 
-          <SearchPlayers />
-          </div>
-          <div className="row">
-            
-        <button type="submit" className='saveButton'>Save</button>
-        </div>
+        <h3 className='sub-header-before-tatics'>CONFIGURE SQUAD</h3>
+        <div className="row">
+          <div className="col-12 col-md-6">  
+          <FormationPlayersForm />
+          <button type="submit" className='saveButton'>Save</button>
+        </div>      
+      <SearchPlayers  />
+      </div>
       </form>
     </div>
     );
