@@ -4,6 +4,7 @@
 // const REACT_APP_FOOTBALL_KEY = process.env.REACT_APP_FOOTBALL_KEY
 export const FETCH_API = 'FETCH_API';
 export const ADD_TEAM = 'ADD_TEAM';
+export const SEARCH_PLAYERS = 'SEARCH_PLAYERS';
 
 const myHeaders = new Headers();
 myHeaders.append("x-rapidapi-key", `${process.env.REACT_APP_FOOTBALL_KEY}`);
@@ -31,6 +32,16 @@ export function addTeam(teams, team) {
     type: ADD_TEAM,
     payload: teams
   }
+}
+
+export function searchPlayers(searchInput) {
+  const promise = fetch(`https://v3.football.api-sports.io/players?league=71&season=2020&search=${searchInput}`, requestOptions)
+  .then(response => response.json())
+
+ return {
+   type: SEARCH_PLAYERS,
+   payload: promise // Will be resolved by redux-promise
+ };
 }
 
 

@@ -15,10 +15,12 @@ import CreateYourTeam from './containers/create_your_team';
 
 import teamReducer from './reducers/team_reducer.js';
 import apiReducer from './reducers/api_reducer.js';
+import playersReducer from './reducers/players_reducer.js';
 
 const reducers = combineReducers({
   myTeams: teamReducer,
-  api: apiReducer
+  api: apiReducer,
+  players: playersReducer
 });
 
 const middlewares = applyMiddleware(reduxPromise, logger);

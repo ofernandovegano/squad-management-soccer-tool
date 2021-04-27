@@ -123,7 +123,7 @@
   }
 }
 .saveButton {
-  width: 45%;
+  width: 90%;
   background: linear-gradient(to bottom, $venturus-md-pink-purple, $venturus-dark-purple 120%);
   border-radius: 5px;
   color: $venturus-white;
@@ -139,7 +139,6 @@
 }
 @media screen and(max-width: 992px) {
   .saveButton {
-    width: 90%;
     margin: 3vh auto 6vh auto;
   }
 }
