@@ -6,8 +6,10 @@ export const FETCH_API = 'FETCH_API';
 export const ADD_TEAM = 'ADD_TEAM';
 export const SEARCH_PLAYERS = 'SEARCH_PLAYERS';
 
+const REACT_APP_FOOTBALL_KEY = process.env.REACT_APP_FOOTBALL_KEY
+
 const myHeaders = new Headers();
-myHeaders.append("x-rapidapi-key", `${process.env.REACT_APP_FOOTBALL_KEY}`);
+myHeaders.append("x-rapidapi-key", `${REACT_APP_FOOTBALL_KEY}`);
 myHeaders.append("x-rapidapi-host", "v3.football.api-sports.io");
 
 const requestOptions = {
