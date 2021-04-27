@@ -69,16 +69,13 @@ class CreateTeamForm extends Component {
           </div>
         </div>
         <h3 className='sub-header-before-tatics'>CONFIGURE SQUAD</h3>
-          <div className="row">
-            <div className="col-12 col-md-6">  
-            <FormationPlayersForm />
-            <button type="submit" className='saveButton'>Save</button>
-          </div>
-      
-        <SearchPlayers  />
-            
-        </div>
-          
+        <div className="row">
+          <div className="col-12 col-md-6">  
+          <FormationPlayersForm />
+          <button type="submit" className='saveButton'>Save</button>
+        </div>      
+      <SearchPlayers  />
+      </div>
       </form>
     </div>
     );

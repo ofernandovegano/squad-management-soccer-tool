@@ -44,7 +44,8 @@ const initialState = {
               ['Ajax Amsterdam', 22],
               ['FC Nantes', 22.1],
               ['CSKA Moscow', 22.5]]],
-  teams: JSON.parse(root.dataset.teams)
+  teams: JSON.parse(root.dataset.teams),
+  players: [{ player: { name: 'Cristiano Ronaldo', age: '32' }, statistics: { 0: { team: {name: 'Juventus'}}}}]
 };
 
 // render an instance of the component in the DOM

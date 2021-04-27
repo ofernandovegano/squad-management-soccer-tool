@@ -16,8 +16,7 @@ class SearchPlayers extends Component {
     this.setState({ value: event.target.value });
   }
 
-  handleSubmit = (event) => {
-    event.preventDefault();
+  handleClick = (event) => {
     this.props.searchPlayers(this.state.value);
     this.setState({ value: '' });
   }
@@ -27,42 +26,31 @@ class SearchPlayers extends Component {
     <div className="col-12 col-md-6 search-players">
       <div className="form-group form-right">
           <p className='search-players-header'>Search Players</p>
+          <div className="search-players">
+            
+            <input
+              type="text"
+              placeholder='Ronaldo'
+              className="form-control input-search-player"
+              autoComplete="off"
+              value={this.state.value}
+              onChange={this.handleChange}
+            />
+            <div classname='search-font-icon'><div><i class="fas fa-search" onClick={this.handleClick}></i></div></div>
+          </div>
           
-        <form onSubmit={this.handleSubmit} className="search-form">
-          <input 
-            type="text"
-            placeholder='Ronaldo'
-            className="form-control input-search-player"
-            autoComplete="off"
-            value={this.state.value}
-            onChange={this.handleChange}
-          />
-          <button type="submit" className='btn btn-primary'>Search</button>
-          </form>
-          
-        <div className='player-searched'>
-          <div className='player-searched-name-age'>
-            <span><strong>Name: </strong> <span className='player-data'>Cristiano Ronaldo</span></span>
-            <span><strong>age: </strong> <span className='player-data'>32</span> </span>
-          </div>
-          <span><strong>Nacionality: </strong> <span className='player-data'>Portugal</span> </span>
-        </div>
-
-        {/* <div className='player-searched'>
-          <div className='player-searched-name-age'>
-           <span> <strong>Name: </strong> <span className='player-data'>Ronaldo Luiz de Alves</span> </span>
-            <span><strong>age: </strong> <span className='player-data'>28</span> </span>
-          </div>
-          <span><strong>Nacionality: </strong> <span className='player-data'>Brazil</span> </span>
-        </div>
-
-        <div className='player-searched'>
-          <div className='player-searched-name-age'>
-            <span><strong>Name: </strong> <span className='player-data'>Ronaldo da Silva de Souza</span> </span>
-            <span><strong>age: </strong> <span className='player-data'>18</span> </span>
-          </div>
-         <span> <strong>Nacionality: </strong> <span className='player-data'>Brazil</span> </span>
-        </div> */}
+        {this.props.players
+          .map((player) => {
+          return(
+            <div className='player-searched'>
+              <div className='player-searched-name-age'>
+                <span><strong>Name: </strong> <span className='player-data'>{ player.player.name }</span></span>
+                <span><strong>age: </strong> <span className='player-data'>{ player.player.age }</span> </span>
+              </div>
+              <span><strong>Team: </strong> <span className='player-data'>{ player.statistics[0].team.name}</span> </span>
+            </div>
+          )} 
+        )}
 
       </div>
     </div>
