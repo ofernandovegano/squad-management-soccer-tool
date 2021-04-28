@@ -8,11 +8,11 @@ class LowestTopFive extends Component {
   render() {
     return (
       <div className='container-top'>
-        {this.props.topFive.map(top => {
+        {this.props.topFive.filter(team => team.avg_age_players !== null).slice(0, 5).map(top => {
           return (
-            <div className='top' key={top[0]}>
-              <div>{top[0]}</div>
-              <div>{top[1]}</div>
+            <div className='top' key={top.name}>
+              <div>{top.name}</div>
+              <div>{top.avg_age_players.toFixed(1)}</div>
             </div>
           )
         }
@@ -24,7 +24,7 @@ class LowestTopFive extends Component {
 
 function mapStateToProps(state) {
   return {
-    topFive: state.myTeams[1].sort((a, b) => a[1] - b[1]).slice(0, 5)
+    topFive: state.teams.sort((a, b)=> a.avg_age_players - b.avg_age_players)
   };
 }
 
