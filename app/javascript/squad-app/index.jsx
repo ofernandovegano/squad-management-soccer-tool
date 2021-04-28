@@ -13,14 +13,16 @@ import { createBrowserHistory as history } from 'history';
 import App from './containers/app';
 import CreateYourTeam from './containers/create_your_team';
 
-import teamReducer from './reducers/team_reducer.js';
+import myTeamsReducer from './reducers/my_teams_reducer.js';
+import teamsReducer from './reducers/teams_reducer.js';
 import apiReducer from './reducers/api_reducer.js';
 import playersReducer from './reducers/players_reducer.js';
 
 const reducers = combineReducers({
-  myTeams: teamReducer,
+  myTeams: myTeamsReducer,
+  teams: teamsReducer,
   api: apiReducer,
-  players: playersReducer
+  players: playersReducer,
 });
 
 const middlewares = applyMiddleware(reduxPromise, logger);

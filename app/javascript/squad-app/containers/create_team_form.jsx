@@ -72,7 +72,9 @@ class CreateTeamForm extends Component {
         <div className="row">
           <div className="col-12 col-md-6">  
           <FormationPlayersForm />
-          <button type="submit" className='saveButton'>Save</button>
+          <div className='submit-btn-form'>
+            <button type="submit" className='saveButton'>Save</button>
+          </div>
           </div>      
           <SearchPlayers  />
         </div>

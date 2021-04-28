@@ -17,6 +17,12 @@
   width: 130px;
   }
 }
+@media screen and (max-width: 1000px) {
+  .container-most-less-picked img {
+    width: 100px;
+  }
+}
+
 .most-less-picked h2 {
   color: $venturus-white;
   margin-top: 2vh;
@@ -46,6 +52,12 @@
   height: 3vh;
   align-self: flex-start;
   color: $venturus-white;
+}
+@media screen and (max-width: 1000px) {
+  .most-less-percent {
+    width: 10%;
+    font-size: 0.7rem;
+  }
 }
 .most {
   border-right: 1px solid rgba(255, 255, 255, .2);

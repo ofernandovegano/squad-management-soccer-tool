@@ -11,9 +11,9 @@ class HighestTopFive extends Component {
       <div className='container-top'>
         {this.props.topFive.reverse().slice(0, 5).map(top => {
           return (
-            <div className='top' key={top[0]}>
-              <div>{top[0]}</div>
-              <div>{top[1]}</div>
+            <div className='top' key={top.name}>
+              <div>{top.name}</div>
+              <div>{top.avg_age_players.toFixed(1)}</div>
             </div>
           )
         }
@@ -25,7 +25,9 @@ class HighestTopFive extends Component {
 
 function mapStateToProps(state) {
   return {
-    topFive: state.myTeams[1].sort((a, b) => a[1] - b[1])
+    // topFive: state.teams[0].sort(team => team.avg_age_players)
+    topFive: state.teams.sort((a, b)=> a.avg_age_players - b.avg_age_players)
+
   };
 }
 
